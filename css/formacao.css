@@ -1,0 +1,36 @@
+
+.titulo {
+
+
+}
+
+.subtitulo {
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
+
+.formacao {
+    position: relative;
+}
+.formacao__nome {
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-bottom: .25rem solid;
+    border-radius: .25rem;
+    box-shadow: 0 .25rem .25rem rgba(0, 0, 0, 0.5);
+}
+.formacao__instituicao {
+    font-size: 1.25rem;
+}
+.formacao__status {
+    margin: .5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.formacao__status::before {
+    content: "[";
+}
+.formacao__status::after {
+    content: "]";
+}

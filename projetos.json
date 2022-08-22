@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nome": "Moonlight Run",
+        "url": "https://play.google.com/store/apps/details?id=com.RDRGames.MoonlightRun",
+        "iconeSrc": "https://play-lh.googleusercontent.com/1ANS84RXN32VIDm6IftGL4FRiD7XJ1hHlkx5cv5M6BVj476Rf8CoUC67MjAll-4Ld94=s64-rw",
+        "tipo": "jogo"
+    },
+    {
+        "id": 2,
+        "nome": "It's AMaze 2D",
+        "url": "https://play.google.com/store/apps/details?id=com.RDRGames.ItsAMaze2D",
+        "iconeSrc": "https://play-lh.googleusercontent.com/5Y22DJapiPd5O3F79835Xilj3806qIgvSh6QwF9e54fR1VfnCpgip-3Q7nccqgeCog=s64-rw",
+        "tipo": "jogo"
+    },
+    {
+        "id": 3,
+        "nome": "It's AMaze 3D",
+        "url": "https://play.google.com/store/apps/details?id=com.RDRGames.ItsAMaze3D",
+        "iconeSrc": "https://play-lh.googleusercontent.com/pNWocUJAhOhy4zrnbB_PUjEzbchzQzHRzGfsoIv-xKCY9g4An6nnmIQ8MyWhJNHC3AQ=s64-rw",
+        "tipo": "jogo"
+    },
+    {
+        "id": 4,
+        "nome": "Marble Challenge",
+        "url": "https://play.google.com/store/apps/details?id=com.RDRGames.MarbleChallenge",
+        "iconeSrc": "https://play-lh.googleusercontent.com/vlEtst8n1wl7l5ictxuug-W6gsuyMvo3w1ORtd_xsqOClfMdg77-PAuwwQf5A4mXweKx=s64-rw",
+        "tipo": "jogo"
+    },
+    {
+        "id": 5,
+        "nome": "Calculadora de Despesas",
+        "url": "https://calcula-despesas.vercel.app/",
+        "iconeSrc": "https://calcula-despesas.vercel.app/assets/img/logo-cd.jpg",
+        "tipo": "site"
+    },
+    {
+        "id": 6,
+        "nome": "Advice Generator | Challenge",
+        "url": "https://advice-generator-roger2405.vercel.app/",
+        "iconeSrc": "https://advice-generator-roger2405.vercel.app/images/favicon-32x32.png",
+        "tipo": "site"
+    },
+    {
+        "id": 7,
+        "nome": "E-commerce page | Challenge",
+        "url": "https://ecommerce-product-roger2405.vercel.app/",
+        "iconeSrc": "https://ecommerce-product-roger2405.vercel.app/images/favicon-32x32.png",
+        "tipo": "site"
+    }
+
+]

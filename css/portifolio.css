@@ -1,0 +1,79 @@
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: .5rem;
+}
+.projeto span {
+    position: absolute;
+    border-radius: inherit;
+    z-index: 0;
+    height: 0%;
+    width: 0%;
+
+    transition: .25s;
+}
+.projeto img {
+    border-radius: 1rem;
+}
+.projeto {
+    position: relative;
+    border-radius: 2.5rem .75rem .75rem 2.5rem;
+    display: flex;
+    margin-top: .5rem;
+    align-items: center;
+}
+.projeto__icone, .projeto__nome {
+    z-index: 5;
+}
+.projeto__icone {
+    height: 5rem;
+    margin-right: 2rem;
+    max-width: 150px;
+}
+.projeto__nome {
+    margin: 0;
+    font-size: 1.5rem;
+    transition: .25s;
+}
+.projeto:hover {
+    color: aliceblue;
+    text-decoration: none;
+
+    transition: .25s;
+}
+.projeto:hover span{
+    animation-name: animacaoSpan;    
+    animation-duration: .25s;
+
+    width: 100%;
+    height: 100%;
+}
+.legenda__icone {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+@keyframes animacaoSpan {
+    0% {
+        width: 0%;
+        height: 0%;
+    }
+    10% {
+        height: 100%;
+        width: 25%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projetos {
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+

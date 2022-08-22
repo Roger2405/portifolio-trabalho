@@ -1,0 +1,23 @@
+[
+    {
+        "nome": "Ensino Médio",
+        "concluido": true,
+        "instituicao": "Colégio Estadual Professor Dario Veloso",
+        "periodo": "2018-2020",
+        "tipo": "academica"
+    },
+    {
+        "nome": "Análise e Desenvolvimento de Sistemas",
+        "concluido": false,
+        "instituicao": "Centro Universitário Internacional - UNINTER",
+        "periodo": "2021-2024",
+        "tipo": "academica"
+    },
+    {
+        "nome": "Inglês - Básico",
+        "concluido": false,
+        "instituicao": "KNN Idiomas",
+        "periodo": "2022-2024",
+        "tipo": "idioma"
+    }
+]
