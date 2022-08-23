@@ -3,7 +3,7 @@ import adicionarClasses from "./adicionarClasses.js";
 
 //requisitando o arquivo JSON;
 var projetosJson = await fetch("../projetos.json")
-  .then((resposta) => projetosJson = resposta.json());
+.then((resposta) => projetosJson = resposta.json());
 
 const secaoProjetos = document.querySelector('.projetos'); //elemento pai de todos os projetos
 
@@ -31,13 +31,12 @@ function montarProjeto(nome, url, iconeUrl, tipo) {
     const spanAnimacao = document.createElement('span');
     adicionarClasses(spanAnimacao, 'bg-dark');
     
-    var iconeProjeto;
-    if(iconeUrl != "") {
-        iconeProjeto = document.createElement('img');
-        iconeProjeto.src = iconeUrl;
-        iconeProjeto.classList.add('projeto__icone');
-        iconeProjeto.alt = `Ícone do Projeto ${nome}`;
-    }
+    const iconeProjeto = document.createElement('img');
+    iconeProjeto.src = iconeUrl;
+    adicionarClasses(iconeProjeto, 'projeto__icone');
+    
+    iconeProjeto.alt = `Ícone do Projeto ${nome}`;
+    
     const listaDeElementosFilho = [iconeProjeto, spanAnimacao, tituloProjeto];
     listaDeElementosFilho.forEach(elemento => {
         divProjeto.appendChild(elemento);
