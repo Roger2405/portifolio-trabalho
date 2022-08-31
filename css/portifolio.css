@@ -26,6 +26,9 @@
 .projeto__icone, .projeto__nome {
     z-index: 5;
 }
+.projeto__link {
+    text-decoration: none;
+}
 .projeto__icone {
     height: 5rem;
     margin-right: 2rem;
