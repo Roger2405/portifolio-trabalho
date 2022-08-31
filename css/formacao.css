@@ -1,14 +1,7 @@
-
-.titulo {
-
-
-}
-
 .subtitulo {
-    margin-top: 1rem;
+    margin-top: 3rem;
     text-transform: uppercase;
 }
-
 .formacao {
     position: relative;
 }
@@ -33,4 +26,14 @@
 }
 .formacao__status::after {
     content: "]";
+}
+
+@media screen and (max-width: 768px) {
+    .formacao__nome {
+        font-size: 1.25rem;
+    }
+    .formacao__instituicao {
+        font-size: .75rem;
+    }
+    
 }

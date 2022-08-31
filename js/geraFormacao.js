@@ -1,36 +1,50 @@
-import adicionarClasses from "./adicionarClasses.js";
+import {adicionarClasses} from "./funcoesComuns.js";
+import {spanMensagemDeErro} from "./funcoesComuns.js";
 
-const secaoIdiomas = document.querySelector('.idiomas');
-const secaoAcademicas = document.querySelector('.academicas');
+const secaoFormacoes = document.querySelector('.formacoes');
+const divIdiomas = document.querySelector('.idiomas');
+const divAcademicas = document.querySelector('.academicas');
 
-var formacoesJson = await fetch("../formacoes.json")
-  .then((resposta) => formacoesJson = resposta.json());
+//requisição do arquivo json que, ao receber a resposta, se a mesma for OK será armazenada na variável;
+var formacoesJson = await fetch("../files/formacoes.json")
+.then((resposta) => resposta.ok && (formacoesJson = resposta.json()));
 
-formacoesJson.forEach(formacao => {
-    montaFormacao(formacao);
-});
+//verifica se a variável está preenchida;
+if(formacoesJson) {
+    //itera por cada formação e chama a função que cria os elementos com as informações e estilos;
+    formacoesJson.forEach(formacao => {
+        montarFormacao(formacao);
+    });
+}
+//se a variável não estiver preenchida, é executado o else, o qual limpa o html dentro da seção de formações e adiciona uma mensagem de erro à secaoFormacoes;
+else {
+    secaoFormacoes.innerHTML = "";
+    secaoFormacoes.appendChild(spanMensagemDeErro());
+}
 
-function montaFormacao({nome, concluido, instituicao, periodo, tipo} = typeof formacoesJson[0]) {
-    const divFormacao = document.createElement('div');
+function montarFormacao({nome, concluido, instituicao, periodo, tipo} = typeof formacoesJson[0]) {
+    //criando os elementos HTML e os salvando em constantes para manipulá-los;
+    const divFormacao = document.createElement('div'); //elemento pai
     const elementoTitulo = document.createElement('h3');
     const elementoStatus = document.createElement('span');
     const elementoInstituicao = document.createElement('p');
     const elementoPeriodo = document.createElement('p');
 
     const listaDeElementosFilho = [elementoTitulo, elementoStatus, elementoInstituicao, elementoPeriodo];
-    
+    //faz o "appendChild" no elemento pai para cada elemento criado;
     listaDeElementosFilho.forEach(elemento => {
         divFormacao.appendChild(elemento);
     });
     
-    console.log(tipo);
+    //verfica em qual div o elemento ficará
     if(tipo == "academica") {
-        secaoAcademicas.appendChild(divFormacao);
+        divAcademicas.appendChild(divFormacao);
     }
     else if(tipo == "idioma") {
-        secaoIdiomas.appendChild(divFormacao);
+        divIdiomas.appendChild(divFormacao);
     }
 
+    //adicionando  o textContent e as classes(utilizando uma função do arquivo "funcoesComuns.js");
     adicionarClasses(divFormacao, "formacao bg-primary text-light rounded mt-3");
 
     elementoTitulo.textContent = nome;

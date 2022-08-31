@@ -17,10 +17,9 @@ header {
 }
 
 .titulo {
-    border-bottom: .5cd prrem solid;
+    border-bottom: .5rem solid;
     display: inline;
     padding-right: 3rem;
-    margin-top: 2rem;
 }
 
 .texto {
@@ -28,8 +27,18 @@ header {
 }
 
 @media screen and (max-width: 767px) {
-    .nav-link:not(.link-ativo) {
+    /*.nav-link:not(.link-ativo) {
         background-color: unset;
+    }*/
+    .nav-link {
+        padding: 0;
+        margin-bottom: .5rem;
+        min-width: 50vw;
+        text-align: center;
+    }
+    .link-ativo {
+        border-top: 0;
+        border-bottom: 4px solid;
     }
     .navegacao {
         background-color: rgba(255, 255, 255, 0.8);

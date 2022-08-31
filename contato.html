@@ -11,12 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contato.css">
     
     <title>Contato</title>
 </head>
-<body class="container">
+<body class="container bg-light">
     <header>
-        <nav class="navbar navbar-expand-md py-sm-2 pb-sm-0">
+        <nav class="navbar navbar-expand-md py-sm-2 pb-sm-0" role="navigation">
             <div class="container-fluid justify-content-end">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -40,8 +41,29 @@
             </div>
         </nav>
     </header>
-    <main class="">
-        <h1 class="titulo modal-title text-black-50 text-uppercase border-primary">Contato</h1>
+    <main class="" role="main">
+        <h1 class="titulo modal-title text-black-50 text-uppercase border-primary" role="heading">Contato</h1>
+        <form class="d-flex flex-column mx-auto" action="" role="form">
+                <div class="d-flex flex-column mt-3">
+                    <label for="nome" class="mb-1">Nome Completo</label>
+                    <input class="px-2 py-2 shadow-sm border-0 rounded" placeholder="Digite aqui" type="text">
+                </div>
+                <div class="d-flex flex-column mt-3">
+                    <label for="email" class="mb-1">E-mail</label>
+                    <input class="px-2 py-2 shadow-sm border-0 rounded" placeholder="email@exemplo.com.br" type="email">
+                </div>
+                <div class="d-flex flex-column mt-3">
+                    <label for="telefone" class="mb-1">Telefone</label>
+                    <input class="px-2 py-2 shadow-sm border-0 rounded" placeholder="(__) _________" type="text">
+                </div>
+                <div class="d-flex flex-column mt-3">
+                    <label for="mensagem" class="mb-1">Mensagem</label>
+                    <textarea class="px-2 py-2 shadow-sm border-0 rounded" placeholder="Escreva aqui a sua mensagem" name="mensagem" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary shadow mt-3 w-100 py-2">Enviar contato</button>
+
+            
+        </form>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
